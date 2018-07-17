@@ -1,0 +1,25 @@
+{% for post in posts %}
+    <div>
+        <h3>Zuletzt ausgewählt:</h3>
+        <p>published: <b>{{ post.pub_date }}</b>
+        </p>
+        <p>
+            name: <b>{{ post.Name }}</b>
+            anmeldung: <b>{{ post.get_Anmeldung_display }}</b>
+            essen: <b>{{ post.get_Essen_display }}</b>
+                <form action="#contact" method="POST">
+                  {% csrf_token %}
+                  <input type="hidden" name="pk" value="{{ post.pk }}">
+                  <input class="btn btn-default btn-danger" name="update" type="submit" value="Ändern"/>
+                </form>
+                <form action="#contact" method="POST">
+                  {% csrf_token %}
+                  <input type="hidden" name="pk" value="{{ post.pk }}">
+                  <input class="btn btn-default btn-danger" name="delete" type="submit" value="Löschen"/>
+                </form>
+        </p>
+        <p>
+            Email: <b>{{ post.Email }}</b>
+        </p>
+    </div>
+{% endfor %}

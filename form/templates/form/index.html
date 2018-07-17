@@ -1,0 +1,201 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Scrolling Nav - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static  'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static  'css/scrolling-nav.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+          {% include "form/logout.html" %}
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Gut Hohenholz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Anreise</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#ablauf">Ablauf</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#übernachten">Übernachten</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Wunschliste">Wunschliste</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Anmeldung</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-white text-black">
+      <div class="container text-center">
+        <h1>Corinna und Sebastian</h1>
+          <img src='{% static "images/kranz.JPG" %}'>
+        <p class="lead">11. Mai 2019</p>
+      </div>
+    </header>
+
+    <section id="about" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Location</h2>
+            <p class="lead"> Die Trauung, sowie die anschließende Feier finden auf <a target="_blank" href="https://www.guthohenholz.de/">Gut Hohenholz</a> statt.</p>
+            <p class="lead">   Gut Hohenholz ist ein mittelalterliches, freiadeliges Rittergut, das umgeben von Wäldern, Wiesen und Pferdekoppeln mitten im Landschaftsschutzgebiet von Bedburg im Rhein Erft Kreis liegt.</p>
+            <img src='{% static "images/Außenansicht_09.JPG" %}'>
+            <p class="lead"> Bei hoffentlich schönem Wetter findet die Trauung im Rondell im Innenhof des Gutes statt. Auch der anschließende Sektempfang und der Anschnitt der Torte werden hier im Innenhof zelebriet. </p>
+            <p class="lead"> Die anschließende Feier bis in die Morgenstunden wird auf der Eventfläche, dem alten Pferdestall des Gutes stattfinden. </p>
+
+
+              This is a great place to
+              <a target="_blank" href="http:\www.guthohenholz.de">Gut Hohenholz</a>
+              talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
+            <ul>
+              <li>Clickable nav links that smooth scroll to page sections</li>
+              <li>Responsive behavior when clicking nav links perfect for a one page website</li>
+              <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
+              <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Anreise</h2>
+            <p class="lead">  <a target="_blank" href="https://www.google.de/maps/place/4-Sterne-Hotel+Gut+Hohenholz/@51.0152885,6.5200417,15z/data=!4m7!3m6!1s0x0:0xd91cbca31fd70f6!5m1!1s2018-07-15!8m2!3d51.0152885!4d6.5200417">Gut Hohenholz, 50181 Bedburg</a> </p>
+            <p class="lead"> Entfernungen: </p>
+            <ul>
+            <li>  Autobahnen: 2 km zur Anbindung A44 und A61</li>
+            <li>  Bahnhof: 3 km Bedburg, kein ICE </li>
+            <li>  Flughafen:
+              <ul>
+                <li> 42 km Düsseldorf </li>
+                <li> 45 km Köln </li>
+                <li> 220 km Frankfurt </li>
+              </ul>
+            <li> Parkplätze: bis zu 100 kostenlose </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+       <section id="ablauf" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>ablauf</h2>
+            <p class="lead">Der Vorabend der Hochzeit: </p>
+            <p class="lead"> Wir selbst werden bereits ab Freitag den 10.05. auf Gut Hohenholz übernachten. Für die Gäste, die ebenfalls bereits am Vortag abreisen, kann es ein kleines gemeinsames Abendessen im Restaurant des Gutes geben.</p>
+            <p class="lead"> Der Tag der Hochzeit: </p>
+            <img src='{% static "images/Ablauf.JPG" %}'>
+            <p class="lead"> Der Tag nach der Hochzeit:  </p>
+            <p class="lead"> Für die Gäste, die auf Gut Hohenholz übernachten findet das Frühstück zwischen 8 und 11 Uhr statt.</p>
+            <p class="lead"> Ob sich das Brautpaar ebenfalls blicken lässt, wird sich dann zeigen ;-)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="übernachten" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Übernachtung</h2>
+            <p class="lead">Das Hotel auf Gut Hohenholz verfügt über insgesamt 55 DZ/EZ</p>
+            <p class="lead"> Da an diesem Tag noch weitere Veranstaltungen sattfinden können, sind derzeit 18 Zimmer für uns geblockt: </p>
+            <p class="lead"> 2 Doppelzimmer "Deluxe" für 143 € pro Nacht </p>
+            <p class="lead"> 4 Doppelzimmer "Superior" für 123 € pro Nacht </p>
+            <p class="lead"> 6 Doppelzimmer "Standard" für 108 € pro Nacht </p>
+            <p class="lead"> 3 Doppelzimmer "Economy" für 103 € pro Nacht </p>
+            <p class="lead"> 3 Lodgen an der Eventfläche für 98 € pro Nacht </p>
+            <p class="lead"> Diese Zimmer sind bis März 2019 für uns geblockt. Sollten keine weiteren Veranstaltungen stattfinden, oder diese die weiteren Zimmer nicht benötigen bekommen wir später möglicherweise weitere Zimmer zur Verfügung gestellt. </p>
+            <p class="lead"> Wir bitten Euch, solltet ihr übernachten wollten, Euch direkt selbst ans Hotel zu wenden. Die Reservierung klappt am besten über die Mailadresse info@guthohenholz.de unter Angabe unserer Namen, sowie des Datums der Hochzeit. </p>
+            <p class="lead"> Wer seine Unterkunft lieber selbst mitbringt, das Abstellen von Wohnmobilen ist in Absprache mit dem Gut ebenfalls erlaubt. </p>
+            <p class="lead"> Sollen die Zimmer nicht ausreichen, oder ihr nach einer preisgünstigeren Alternative suchen, gibt es in der Nähe noch die folgenden Hotels: </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Wunschliste" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Wunschliste</h2>
+            <p class="lead"> Findet ihr keinen Schlaf mehr, und plagt Euch die Frage: "Was wär's für die Zwei bloß die passende Gabe, Die haben schon alles, was kann man noch schenken?", So bitten wir höflich dabei zu bedenken: Unsere Wohnung ist schön, doch leider zu klein. Ein eigenes Haus soll es möglichst bald sein. Doch Haus und Hochzeit - das wird teuer, drum helft uns, schenkt Bares fürs neue Gemäuer. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Anmeldung</h2>
+            <form action="#contact" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" name="add" value="Update" />
+</form>
+          {% include "form/post_list.html" %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static  'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static  'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static  'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="{% static  'js/scrolling-nav.js' %}"></script>
+
+  </body>
+
+</html>
