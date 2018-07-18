@@ -7,19 +7,17 @@
             name: <b>{{ post.Name }}</b>
             anmeldung: <b>{{ post.get_Anmeldung_display }}</b>
             essen: <b>{{ post.get_Essen_display }}</b>
-                <form action="#contact" method="POST">
-                  {% csrf_token %}
-                  <input type="hidden" name="pk" value="{{ post.pk }}">
-                  <input class="btn btn-default btn-danger" name="update" type="submit" value="Ändern"/>
-                </form>
-                <form action="#contact" method="POST">
-                  {% csrf_token %}
-                  <input type="hidden" name="pk" value="{{ post.pk }}">
-                  <input class="btn btn-default btn-danger" name="delete" type="submit" value="Löschen"/>
-                </form>
-        </p>
-        <p>
             Email: <b>{{ post.Email }}</b>
+                <form action="#contact" method="POST"  style="display: inline;">
+                  {% csrf_token %}
+                  <input type="hidden" name="pk" value="{{ post.pk }}">
+                  <input class="btn btn-default btn-danger" name="update" type="submit" value="Ändern">
+                </form>
+                <form action="#contact" method="POST"  style="display: inline;">
+                  {% csrf_token %}
+                  <input type="hidden" name="pk" value="{{ post.pk }}">
+                  <input class="btn btn-default btn-danger" name="delete" type="submit" value="Löschen">
+                </form>
         </p>
     </div>
 {% endfor %}

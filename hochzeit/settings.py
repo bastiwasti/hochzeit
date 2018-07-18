@@ -26,7 +26,8 @@ SECRET_KEY = '1ls#gma*5fa^n(rfo9!dx0_e4b$=*j*j&11mjd8l$)dg8xb5&8'
 DEBUG = True
 
 ALLOWED_HOSTS = ['bastiwasti.pythonanywhere.com',
-                 '127.0.0.1'
+                 '127.0.0.1',
+                 'www.connyundbastiheiraten.de',
 ]
 
 
@@ -126,4 +127,4 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/home/bastiwasti/hochzeit/static/'
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
-LOGIN_REDIRECT_URL = '/form/'
+LOGIN_REDIRECT_URL = '/'
