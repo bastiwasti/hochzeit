@@ -13,30 +13,17 @@ header {
     padding: 156px 0 100px;
   }
 
-
-.img-responsive {
-    width:100%;
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 section {
-  padding: 150px 0;
+  padding: 0 0;
  /* background-image: url('../images/footer.JPG'); */
-}
-
-#footer {
-	max-width: 100%;
-	background-image: url('../images/footer.JPG');
 }
 
 h2 { /* 1 priority score, not enough to override Bootstrap jumbotron definition */
   color: #93c572;
-}
-
-navbar {
- background-image: url('{% static "images/footer.JPG" %}');
- /* background-image: url('../images/footer.JPG'); */
-}
-
-.col-lg-8 mx-auto{
- background-image: url('{% static "images/footer.JPG" %}');
 }
