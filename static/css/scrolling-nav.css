@@ -8,10 +8,23 @@ header {
   padding: 154px 0 100px;
 }
 
+
 @media (min-width: 992px) {
   header {
     padding: 156px 0 100px;
   }
+
+  section {
+  padding: 50px 0;
+ /* background-image: url('../images/footer.JPG'); */
+}
+
+h2 { /* 1 priority score, not enough to override Bootstrap jumbotron definition */
+  color: #93c572 ;
+}
+
+
+ }
 
 .helper {
     display: inline-block;
@@ -20,10 +33,15 @@ header {
 }
 
 section {
-  padding: 0 0;
+  padding: 50px 0;
  /* background-image: url('../images/footer.JPG'); */
 }
 
 h2 { /* 1 priority score, not enough to override Bootstrap jumbotron definition */
-  color: #93c572;
+  color: #93c572 !important;
 }
+
+.lead {
+    font-size: 16px;
+}
+
