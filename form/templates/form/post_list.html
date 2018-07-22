@@ -1,13 +1,10 @@
 {% for post in posts %}
     <div>
-        <h3>Zuletzt ausgewählt:</h3>
-        <p>published: <b>{{ post.pub_date }}</b>
-        </p>
-        <p>
-            name: <b>{{ post.Name }}</b>
-            anmeldung: <b>{{ post.get_Anmeldung_display }}</b>
-            essen: <b>{{ post.get_Essen_display }}</b>
+        <p class="lead">
+            Name: <b>{{ post.Name }}</b>
+            Anmeldung: <b>{{ post.get_Anmeldung_display }}</b>
             Email: <b>{{ post.Email }}</b>
+                <p class="lead">Veröffentlicht: <b>{{ post.pub_date }}</b></p>
                 <form action="#contact" method="POST"  style="display: inline;">
                   {% csrf_token %}
                   <input type="hidden" name="pk" value="{{ post.pk }}">

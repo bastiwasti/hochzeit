@@ -21,7 +21,7 @@ def get_name(request):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            eintrag.Name = request.user  # Set the user object here
+            eintrag.User = request.user  # Set the user object here
             eintrag.pub_date = timezone.now()  # Set the user object here
             eintrag.save()
 
@@ -34,7 +34,7 @@ def get_name(request):
     if request.method == 'POST' and 'update' in request.POST:
         eintrag = Eintrag.objects.get(id=request.POST['pk'])
         form = NameForm(instance=eintrag)
-        posts = Eintrag.objects.filter(Name=request.user)
+        posts = Eintrag.objects.filter(User=request.user)
         Eintrag.objects.filter(id=request.POST['pk']).delete()
         return render(request, 'form/index.html/', {'form': form, 'posts': posts})
 
@@ -51,6 +51,6 @@ def get_name(request):
     else:
         form = NameForm()
 
-    posts = Eintrag.objects.filter(Name=request.user)
+    posts = Eintrag.objects.filter(User=request.user)
     return render(request, 'form/index.html', {'form': form, 'posts': posts})
 

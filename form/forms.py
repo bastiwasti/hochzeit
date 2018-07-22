@@ -5,4 +5,4 @@ class NameForm(forms.ModelForm):
 
     class Meta:
             model = Eintrag
-            fields = ['Anmeldung', 'Essen','Email']
+            fields = ['Name','Anmeldung','Email']

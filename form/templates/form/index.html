@@ -34,10 +34,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#ablauf">Ablauf</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">Anmeldung</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">Gut Hohenholz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#ablauf">Ablauf</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#übernachten">Übernachten</a>
@@ -47,9 +50,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#Wunschliste">Wunschliste</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Anmeldung</a>
             </li>
           </ul>
         </div>
@@ -77,18 +77,21 @@
       </div>
     </header>
 
-    <section id="ablauf" class="bg-light">
+    <section id="contact" class="bg-light">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>Ablauf</h2>
-            <p class="lead"><b>Der Vorabend der Hochzeit: </b></p>
-            <p class="lead"> Wir selbst werden bereits ab Freitag den 10.05. auf Gut Hohenholz übernachten. Für die Gäste, die ebenfalls bereits am Vortag anreisen, kann es ein kleines gemeinsames Abendessen im Restaurant des Gutes geben.</p>
-            <p class="lead"><b> Der Tag der Hochzeit: </b></p>
-            <img class="img-responsive" src='{% static "images/ablauf.JPG" %}' style='width:100%;' >
-            <p class="lead"><b> Der Tag nach der Hochzeit:  </b></p>
-            <p class="lead"> Für die Gäste, die auf Gut Hohenholz übernachten findet das Frühstück zwischen 8 und 11 Uhr statt.</p>
-            <p class="lead"> Ob sich das Brautpaar ebenfalls blicken lässt, wird sich dann zeigen ;-)</p>
+            <h2>Anmeldung</h2>
+            <b class="lead"> Wir würden euch bitten bis zum
+            11. April 2019 euch und eure Begleitung und Kinder, die natürlich alle herzlich eingeladen sind, anzugeben.
+            An diesem Tag müssen wir die Anzahl der Gäste verbindlich an Gut Hohenholz übermitteln. <br>
+            Falls sich hiernach noch kurzfristige Änderungen ergeben, müsstet ihr uns bitte persönlich Bescheid geben.</b>
+            <form action="#contact" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" name="add" value="Update" />
+            </form>
+          {% include "form/post_list.html" %}
           </div>
         </div>
       </div>
@@ -110,7 +113,24 @@
       </div>
     </section>
 
-    <section id="übernachten" class="bg-light">
+    <section id="ablauf" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Ablauf</h2>
+            <p class="lead"><b>Der Vorabend der Hochzeit: </b></p>
+            <p class="lead"> Wir selbst werden bereits ab Freitag den 10.05. auf Gut Hohenholz übernachten. Für die Gäste, die ebenfalls bereits am Vortag anreisen, kann es ein kleines gemeinsames Abendessen im Restaurant des Gutes geben.</p>
+            <p class="lead"><b> Der Tag der Hochzeit: </b></p>
+            <img class="img-responsive" src='{% static "images/ablauf.JPG" %}' style='width:100%;' >
+            <p class="lead"><b> Der Tag nach der Hochzeit:  </b></p>
+            <p class="lead"> Für die Gäste, die auf Gut Hohenholz übernachten findet das Frühstück zwischen 8 und 11 Uhr statt.</p>
+            <p class="lead"> Ob sich das Brautpaar ebenfalls blicken lässt, wird sich dann zeigen ;-)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="übernachten">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
@@ -133,7 +153,7 @@
       </div>
     </section>
 
-   <section id="services">
+   <section id="services" class="bg-light">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
@@ -142,7 +162,7 @@
             <p class="lead"> <b>Entfernungen: </b></p>
             <ul>
             <li> <p class="lead"> Autobahnen: 2 km zur Anbindung A44 und A61</p></li>
-            <li> <p class="lead"> Bahnhof: 3 km Bedburg, kein ICE </p></li>
+            <li> <p class="lead"> Bahnhof: 5 km Bedburg, Verkehrt von Köln HbF stündlich ( ca. 40 Minuten, RB38 ). <br> Letzte Fahrt 1:13, erste Fahrt 7:43. ( Stand 07/2018 ) </p></li>
             <li> <p class="lead"> Flughafen: </p>
               <ul>
                 <li> <p class="lead"> 42 km Düsseldorf </p> </li>
@@ -156,32 +176,12 @@
       </div>
     </section>
 
-    <section id="Wunschliste" class="bg-light">
+    <section id="Wunschliste">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2>Wunschliste</h2>
             <p class="lead"> Findet ihr keinen Schlaf mehr, und plagt Euch die Frage: "Was wär's für die Zwei bloß die passende Gabe, Die haben schon alles, was kann man noch schenken?", So bitten wir höflich dabei zu bedenken: Unsere Wohnung ist schön, doch leider zu klein. Ein eigenes Haus soll es möglichst bald sein. Doch Haus und Hochzeit - das wird teuer, drum helft uns, schenkt Bares fürs neue Gemäuer. </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Anmeldung</h2>
-            <b class="lead"> Wir würden euch bitten bis zum
-            11. April 2019 euch und eure Begleitung und Kinder, die natürlich alle herzlich eingeladen sind, anzugeben.
-            An diesem Tag müssen wir die Anzahl der Gäste verbindlich an Gut Hohenholz übermitteln.
-            Falls sich hiernach noch kurzfristige Änderungen ergeben, müsstet ihr uns bitte persönlich Bescheid geben.</b>
-            <form action="#contact" method="post">
-                {% csrf_token %}
-                {{ form }}
-                <input type="submit" name="add" value="Update" />
-            </form>
-          {% include "form/post_list.html" %}
           </div>
         </div>
       </div>
